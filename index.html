@@ -174,12 +174,17 @@
       <li><strong>Email:</strong> <a href="mailto:palavecino95tecnica@gmail.com">palavecino95tecnica@gmail.com</a></li>
     </ul>
 
-    <form id="contactForm" class="contact-form">
-      <input type="text" id="name" placeholder="Tu nombre" required />
-      <input type="email" id="email" placeholder="Tu email" required />
-      <textarea id="message" placeholder="Tu mensaje" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
+    <form name="contacto" method="POST" data-netlify="true" class="contact-form">
+  <input type="text" name="nombre" placeholder="Tu nombre" required />
+  <input type="email" name="email" placeholder="Tu email" required />
+  <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+
+  <!-- Campo oculto para evitar spam -->
+  <input type="hidden" name="form-name" value="contacto">
+
+  <button type="submit" class="btn">Enviar</button>
+</form>
+
   </section>
 
   <footer>
